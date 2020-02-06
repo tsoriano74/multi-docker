@@ -13,9 +13,9 @@ after_success:
   - docker build -t tsoriano/multi-nginx ./nginx
   - docker build -t tsoriano/multi-server ./server
   - docker build -t tsoriano/multi-worker ./worker
-  #Log in to the docker CLI
+  #Log in to the docker CLI.
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  #Take those images and push it to docker hub
+  #Take those images and push it to docker hub.
   - docker push tsoriano/multi-client
   - docker push tsoriano/multi-nginx
   - docker push tsoriano/multi-server
